@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_public_widget/flutter_public_widget.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SetUrlPage extends StatefulWidget {
   @override
@@ -29,13 +28,12 @@ class SetUrlPageState extends State<SetUrlPage> {
   }
 
   void syncInit() async {
-    var prefs = await SharedPreferences.getInstance();
 
     var urlStr = await PersistentStorage().hasKey('urlStr');
     var hasurlList = await PersistentStorage().hasKey('urlList');
 
     if (urlStr == true) {
-      urltf.text = prefs.getString('urlStr')!;
+      urltf.text = await PersistentStorage().getStorage('urlStr');
     } else {
       // urltf.text = 'http://202.136.212.84:8069';
       // urltf.text = 'http://122.51.164.176:8072';
@@ -44,7 +42,7 @@ class SetUrlPageState extends State<SetUrlPage> {
     }
 
     if (hasurlList == true) {
-      urlList = prefs.getStringList('urlList')!;
+      urlList = await PersistentStorage().getStorage('urlList');
     } else {}
 
     setState(() {});
@@ -68,12 +66,14 @@ class SetUrlPageState extends State<SetUrlPage> {
                   BotToast.showText(text: '请输入正确的url');
                   return;
                 }
-                var prefs = await SharedPreferences.getInstance();
-                prefs.setString('urlStr', urltf.text);
+                // var prefs = await SharedPreferences.getInstance();
+
+                await PersistentStorage().setStorage('urlStr',  urltf.text);
 
                 urlList.add(urltf.text);
 
-                prefs.setStringList('urlList', urlList);
+                await PersistentStorage().setStorage('urlStr',  urltf.text);
+
 
                 setState(() {});
                 Get.back();
