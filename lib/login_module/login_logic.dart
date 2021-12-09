@@ -6,7 +6,6 @@ import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:get/route_manager.dart';
 import 'dart:async';
-// import '../home_moudle/home_page.dart';
 import 'package:flutter_public_widget/flutter_public_widget.dart';
 class LoginLogic extends GetxController{
 
