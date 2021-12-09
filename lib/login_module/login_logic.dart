@@ -78,9 +78,12 @@ class LoginLogic extends GetxController{
 
 
   /// 账号密码登录
-  requestDataWithLogin(var username, var pass)async{
+
+  /// 账号密码登录
+  Future<bool> requestDataWithLogin(var username, var pass)async{
 
 
+    var _json;
 
     var params = {
       'login': username,
@@ -88,30 +91,34 @@ class LoginLogic extends GetxController{
       'type': '0',
     };
 
-    DioManager().rcRequset(Address.login,params:params).then((value) async {
+    var result = await DioManager().postModel(Address.login,params: params);
 
-      BotToast.showText(text: '${value['message']}');
+    // DioManager().rcRequset(Address.login,params:params).then((value) async {
+    //
+    BotToast.showText(text: '${result['message']}');
+    //
+    model = User.fromJson(result).obs;
 
-      model = User.fromJson(value).obs;
+    await PersistentStorage()
+        .setStorage('acctoken', model.value.data.accessToken);
+    await PersistentStorage().setStorage('login', model.value.data.login);
+    await PersistentStorage().setStorage('uid', model.value.data.uid);
+    await PersistentStorage()
+        .setStorage('partner_id', model.value.data.partnerId);
+    await PersistentStorage().setStorage('image128', model.value.data.image128);
+    await PersistentStorage().setStorage('name', model.value.data.name);
+    await PersistentStorage()
+        .setStorage('is_gesture', model.value.data.is_gesture);
+    Get.snackbar('提示', model.value.message, colorText: Colors.white);
+    // Get.offAll(WorkBenchPage());
+    // });
 
-      await PersistentStorage()
-          .setStorage('acctoken', model.value.data.accessToken);
-      await PersistentStorage().setStorage('login', model.value.data.login);
-      await PersistentStorage().setStorage('uid', model.value.data.uid);
-      await PersistentStorage()
-          .setStorage('partner_id', model.value.data.partnerId);
-      await PersistentStorage().setStorage('image128', model.value.data.image128);
-      await PersistentStorage().setStorage('name', model.value.data.name);
-      await PersistentStorage()
-          .setStorage('is_gesture', model.value.data.is_gesture);
-      Get.snackbar('提示', model.value.message, colorText: Colors.white);
+    if(result['errmsg']=='ok'){
+      return true;
+    }
 
-      // Get.offAll(WorkBenchPage());
-
-    });
+    return false;
   }
-
-
   ///
 }
 
