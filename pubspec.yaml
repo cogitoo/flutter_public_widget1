@@ -23,7 +23,8 @@ dependencies:
   webview_flutter: ^2.3.1
   #轮播图
   flutter_swiper_null_safety: ^1.0.2
-
+  #验证码输入框
+  flutter_verification_box: ^2.0.0
 
 
 dev_dependencies:

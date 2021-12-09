@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_public_widget/register_module/register_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_public_widget/flutter_public_widget.dart';
 
@@ -269,7 +270,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                         color: Theme.of(context).primaryColor),
                                   ),
                                   onTap: () {
-                                    // Get.to(RegisterPage());
+                                    Get.to(RegisterPage());
                                   },
                                 ),
                                 // GestureDetector(
