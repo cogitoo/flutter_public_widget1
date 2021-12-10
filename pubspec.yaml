@@ -25,6 +25,8 @@ dependencies:
   flutter_swiper_null_safety: ^1.0.2
   #验证码输入框
   flutter_verification_box: ^2.0.0
+  #解析html标签
+  flutter_html: ^2.2.1
 
 
 dev_dependencies:
@@ -37,6 +39,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+
+  uses-material-design: true
 
   # To add assets to your package, add an assets section, like this:
   assets:
