@@ -130,7 +130,7 @@ class _RegisterSetPasswordPageState extends State<RegisterSetPasswordPage> with 
                         setState(() {
 
                         });
-                      }, icon: Image.asset('assets/showps.png')),
+                      }, icon: Image.asset('images/showps.png')),
                     ],
                   ),
                 ),
@@ -165,7 +165,7 @@ class _RegisterSetPasswordPageState extends State<RegisterSetPasswordPage> with 
                         setState(() {
 
                         });
-                      }, icon: Image.asset('assets/showps.png')),
+                      }, icon: Image.asset('images/showps.png')),
                     ],
                   )
                 ),

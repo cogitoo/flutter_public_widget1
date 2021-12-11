@@ -71,6 +71,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                             'images/supstar_icon.png',
                             width: 50,
                             height: 50,
+                            package: 'flutter_public_widget',
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 8),
@@ -233,6 +234,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                           'images/showps.png',
                                           width: 15,
                                           height: 15,
+                                          package: 'flutter_public_widget',
                                         ))
                                   ],
                                 )),
