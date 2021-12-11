@@ -11,3 +11,4 @@ export 'login_module/login_page.dart';
 export 'login_module/seturl_page.dart';
 export 'package:bot_toast/bot_toast.dart';
 export 'package:get/route_manager.dart';
+export 'package:flutter_easyrefresh/easy_refresh.dart';
