@@ -27,6 +27,12 @@ dependencies:
   flutter_verification_box: ^2.0.0
   #解析html标签
   flutter_html: ^2.2.1
+    #加载网络图片
+  cached_network_image: ^3.2.0
+    #加载框
+  flutter_spinkit: ^5.1.0
+  #刷新
+  flutter_easyrefresh: ^2.2.1
 
 
 dev_dependencies:
