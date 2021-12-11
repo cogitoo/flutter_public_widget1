@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                       Row(
                         children: [
                           Image.asset(
-                            'assets/supstar_icon.png',
+                            'images/supstar_icon.png',
                             width: 50,
                             height: 50,
                           ),
@@ -229,7 +229,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                           setState(() {});
                                         },
                                         icon: Image.asset(
-                                          'assets/showps.png',
+                                          'images/showps.png',
                                           width: 15,
                                           height: 15,
                                         ))
