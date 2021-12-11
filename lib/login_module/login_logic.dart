@@ -91,7 +91,7 @@ class LoginLogic extends GetxController{
       'type': '0',
     };
 
-    var result = await DioManager().postModel(Address.login,params: params);
+    var result = await DioManager().rcRequset(Address.login,params: params);
 
     // DioManager().rcRequset(Address.login,params:params).then((value) async {
     //
