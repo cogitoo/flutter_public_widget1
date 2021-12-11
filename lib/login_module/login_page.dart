@@ -66,6 +66,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                     children: [
                       Row(
                         children: [
+                          ///gengx
                           Image.asset(
                             'images/supstar_icon.png',
                             width: 50,
