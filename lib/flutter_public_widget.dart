@@ -12,3 +12,5 @@ export 'login_module/seturl_page.dart';
 export 'package:bot_toast/bot_toast.dart';
 export 'package:get/route_manager.dart';
 export 'package:flutter_easyrefresh/easy_refresh.dart';
+export 'package:shared_preferences/shared_preferences.dart';
+export 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
