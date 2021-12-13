@@ -187,32 +187,32 @@ class _CodeLoginPageState extends State<CodeLoginPage>
           ),
 
 
-          Container(
-            padding: EdgeInsets.only(left: 25, top: 15, right: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-
-                  child: Text(
-                    '手势登录'.tr, style: TextStyle(fontSize: 14, color: HexColor(
-                      '#2A39E1')),),
-                  onTap: () {
-                    // Get.to(GesturePasswordWidgetDemo());
-                  },
-                ),
-                GestureDetector(
-
-                  child: Text(
-                    '人脸登录'.tr, style: TextStyle(fontSize: 14, color: HexColor(
-                      '#2A39E1')),),
-                  onTap: () {
-                    // Get.to(FaceLoginPage());
-                  },
-                ),
-              ],
-            ),
-          ),
+          // Container(
+          //   padding: EdgeInsets.only(left: 25, top: 15, right: 25),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       GestureDetector(
+          //
+          //         child: Text(
+          //           '手势登录'.tr, style: TextStyle(fontSize: 14, color: HexColor(
+          //             '#2A39E1')),),
+          //         onTap: () {
+          //           // Get.to(GesturePasswordWidgetDemo());
+          //         },
+          //       ),
+          //       GestureDetector(
+          //
+          //         child: Text(
+          //           '人脸登录'.tr, style: TextStyle(fontSize: 14, color: HexColor(
+          //             '#2A39E1')),),
+          //         onTap: () {
+          //           // Get.to(FaceLoginPage());
+          //         },
+          //       ),
+          //     ],
+          //   ),
+          // ),
 
           Container(
             margin: EdgeInsets.only(top: 72, right: 15, left: 15),
